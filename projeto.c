@@ -12,8 +12,13 @@ float sub(float a, float b){
 }
 
 float mult(float a, float b){
-	float mult_num = a*b;
+	float mult_num = (a*b);
 	return mult_num;
+}
+
+float div(float a, float b){
+	float div_num = a/b;
+	return div_num;
 }
 	
 	
@@ -22,12 +27,12 @@ int main(){
 	
 	int cod;
 	
-	printf("Digite 1 para somar\n2 para subtrair\n3 para multiplicar\n");
+	printf("Digite 1 para somar\n2 para subtrair\n3 para multiplicar\n4 para dividir");
 	scanf("%d", &cod);
 	
 	switch(cod){
 		case 1:
-			scanf("%f %f", x, y);
+			scanf("%f %f", &x, &y);
 			printf("A soma é %d \n", soma(x,y));
 			break;
 		case 2:
@@ -37,6 +42,10 @@ int main(){
 		case 3:
 			scanf("%f %f", &x, &y);
 			printf("A multiplicacao e %d \n", mult(x,y));
+			break;
+		case 4:
+			scanf("%f %f", &x, &y);
+			printf("A divisao e %d \n", div(x,y));
 			break;
 			
 		default: 
