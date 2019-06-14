@@ -27,32 +27,37 @@ int main(){
 	
 	int cod;
 	
-	printf("Digite 1 para somar\n2 para subtrair\n3 para multiplicar\n4 para dividir");
-	scanf("%d", &cod);
-	
-	switch(cod){
-		case 1:
-			scanf("%f %f", &x, &y);
-			printf("A soma é %d \n", soma(x,y));
-			break;
-		case 2:
-			scanf("%f %f", &x, &y);
-			printf("A subtracao e %d \n", sub(x,y));
-			break;
-		case 3:
-			scanf("%f %f", &x, &y);
-			printf("A multiplicacao e %d \n", mult(x,y));
-			break;
-		case 4:
-			scanf("%f %f", &x, &y);
-			printf("A divisao e %d \n", div(x,y));
-			break;
+
+
+	while(cod != 0){
 			
-		default: 
-			printf("Codigo invalido\n");
-			break;	
-	}
+		printf("Digite:\n1 para somar\n2 para subtrair\n3 para multiplicar\n4 para dividir\n");
+		scanf("%d", &cod);
 	
+		switch(cod){
+			case 1:
+				scanf("%f %f", &x, &y);
+				printf("A soma e %f \n", soma(x,y));
+				break;
+			case 2:
+				scanf("%f %f", &x, &y);
+				printf("A subtracao e %f \n", sub(x,y));
+				break;
+			case 3:
+				scanf("%f %f", &x, &y);
+				printf("A multiplicacao e %f \n", mult(x,y));
+				break;
+			case 4:
+				scanf("%f %f", &x, &y);
+				printf("A divisao e %f \n", div(x,y));
+				break;
+				
+			default: 
+				printf("Codigo invalido\n");
+				break;	
+		}
+		printf("Digite 0 para sair\n");
+	}
 
 	return 0;
 }
